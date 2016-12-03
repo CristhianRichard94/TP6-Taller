@@ -32,7 +32,7 @@ namespace EJ1
                 db.SaveChanges();
 
                 //busqueda
-                foreach(var item in db.Personas)
+                foreach (var item in db.Personas)
                 {
                     Console.WriteLine("Persona Encontrada Nombre:{0}, Apellido:{1}, IdPersona:{2}",
                                         item.Nombre,
@@ -40,6 +40,7 @@ namespace EJ1
                                         item.PersonaId);
                 }
                 Console.ReadKey();
+            }
         }
     }
 }
