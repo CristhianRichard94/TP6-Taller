@@ -39,7 +39,7 @@ namespace EJ1
                                         item.Apellido,
                                         item.PersonaId);
                 }
-                Console.ReadKey();
+                Console.ReadLine();
             }
         }
     }
