@@ -13,5 +13,16 @@ namespace AccountManager.Domain
 
         public double Amount { get; set; }
 
+        public AccountMovement()
+        {
+
+        }
+
+        public AccountMovement(DateTime pDate, String pDescription, double pAmount)
+        {
+            this.Date = pDate;
+            this.Description = pDescription;
+            this.Amount = pAmount;
+        }
     }
 }
