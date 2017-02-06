@@ -18,13 +18,50 @@ namespace AccountManager.UserInterface
         private ClientDTO iClient;
         public Facade iFacade;
 
-        public CrearCliente()
+        public CrearCliente(Facade pFacade, ClientDTO pClient = null)
         {
             InitializeComponent();
+            this.iFacade = pFacade;
+            this.iClient = pClient;
+            this.comboBox1.SelectedIndex = 1;
+            ShowClient();
         }
+
+        private void ShowClient()
+        {
+            if (this.iClient == null)
+            {
+                this.iClient = new ClientDTO();
+            }
+            else
+            {
+                this.textBox4.Text = this.iClient.Id.ToString();
+            }
+            this.textBox1.Text = this.iClient.FirstName;
+            this.textBox2.Text = this.iClient.LastName;
+            this.textBox3.Text = this.iClient.DocumentNumber;
+            this.comboBox1.SelectedIndex = this.iClient.DocumentType.GetHashCode();
+        }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                throw new Exception("No se ha ingresado nombre de cliente");
+            }
+            if (String.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                throw new Exception("No se ha ingresado apellido de cliente");
+            }
+            if (String.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                throw new Exception("No se ha ingresado Numero de documento");
+            }
+            if (comboBox1.SelectedIndex< 0)
+            {
+                throw new Exception("No se ha ingresado tipo de documento");
+            }
             this.iClient.FirstName = this.textBox1.Text;
             this.iClient.LastName = this.textBox2.Text;
             this.iClient.DocumentNumber = this.textBox3.Text;
@@ -34,7 +71,7 @@ namespace AccountManager.UserInterface
             {
                 try
                 {
-                    iFacade.Cliente.UpdateClient(this.iClient);
+                    iFacade.Client.UpdateClient(this.iClient);
                     this.Close();
                 }
                 catch (Exception exception)
@@ -46,7 +83,7 @@ namespace AccountManager.UserInterface
             {
                 try
                 {
-                    iFacade.Cliente.CreateClient(this.iClient);
+                    iFacade.Client.CreateClient(this.iClient);
                     this.Close();
                 }
                 catch (Exception exception)
@@ -63,6 +100,16 @@ namespace AccountManager.UserInterface
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrearCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

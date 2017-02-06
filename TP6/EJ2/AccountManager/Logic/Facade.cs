@@ -18,7 +18,7 @@ namespace AccountManager.Logic
             this.iAccount = new AccountOperations(pUOW);
         }
 
-        public ClientOperations Cliente { get { return this.iClient; } }
-        public AccountOperations Cuenta { get { return this.iAccount; } }
+        public ClientOperations Client { get { return this.iClient; } }
+        public AccountOperations Account { get { return this.iAccount; } }
     }
 }

@@ -12,6 +12,7 @@ namespace AccountManager.UserInterface
 {
     public partial class Main : Form
     {
+
         public Main()
         {
             InitializeComponent();
@@ -44,7 +45,7 @@ namespace AccountManager.UserInterface
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CrearCliente crearcl = new CrearCliente();
+            CrearCliente crearcl = new CrearCliente(iFacade);
             crearcl.Show();
         }
 
