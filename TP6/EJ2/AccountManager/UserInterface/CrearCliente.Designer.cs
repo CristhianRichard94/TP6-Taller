@@ -84,6 +84,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -169,6 +170,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CrearCliente";
             this.Text = "CrearCliente";
+            this.Load += new System.EventHandler(this.CrearCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
