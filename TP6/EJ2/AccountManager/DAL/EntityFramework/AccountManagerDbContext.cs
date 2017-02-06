@@ -4,7 +4,7 @@ using System.Data.Entity;
 
 namespace AccountManager.DAL.EntityFramework
 {
-    internal class AccountManagerDbContext : DbContext
+    public class AccountManagerDbContext : DbContext
     {
         public DbSet<Client> Clients { get; set; }
 

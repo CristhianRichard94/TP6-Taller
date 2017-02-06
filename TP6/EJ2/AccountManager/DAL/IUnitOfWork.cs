@@ -2,7 +2,7 @@
 
 namespace AccountManager.DAL
 {
-    interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork : IDisposable
     {
 
         IAccountRepository AccountRepository { get; }
