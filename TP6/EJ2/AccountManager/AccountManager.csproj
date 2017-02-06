@@ -131,6 +131,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="UserInterface\CrearCliente.resx">
+      <DependentUpon>CrearCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\CrearCuenta.resx">
       <DependentUpon>CrearCuenta.cs</DependentUpon>
     </EmbeddedResource>
