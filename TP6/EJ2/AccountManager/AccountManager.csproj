@@ -77,9 +77,9 @@
     <Compile Include="Domain\AccountMovement.cs" />
     <Compile Include="Domain\Client.cs" />
     <Compile Include="Domain\Document.cs" />
-    <Compile Include="DataTransferObject\AccountDTO.cs" />
-    <Compile Include="DataTransferObject\AccountMovementDTO.cs" />
-    <Compile Include="DataTransferObject\ClientDTO.cs" />
+    <Compile Include="DTO\AccountDTO.cs" />
+    <Compile Include="DTO\AccountMovementDTO.cs" />
+    <Compile Include="DTO\ClientDTO.cs" />
     <Compile Include="Logic\AccountOperations.cs" />
     <Compile Include="Logic\ClientOperations.cs" />
     <Compile Include="Logic\Fachada.cs" />
