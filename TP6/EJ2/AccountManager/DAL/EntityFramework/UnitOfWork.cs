@@ -2,7 +2,7 @@
 
 namespace AccountManager.DAL.EntityFramework
 {
-    class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
 
         private readonly AccountManagerDbContext iDbContext;

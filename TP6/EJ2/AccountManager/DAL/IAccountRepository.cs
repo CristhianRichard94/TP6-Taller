@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AccountManager.DAL
 {
-    interface IAccountRepository : IRepository<Account>
+   public interface IAccountRepository : IRepository<Account>
     {
 
         double GetAccountBalance(Account pAccount);

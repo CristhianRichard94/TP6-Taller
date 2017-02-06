@@ -10,7 +10,7 @@ using AutoMapper;
 
 namespace AccountManager.Logic
 {
-    class ClientOperations
+    public class ClientOperations
     {
 
         private UnitOfWork iUOW;

@@ -7,7 +7,7 @@ using AccountManager.DAL.EntityFramework;
 
 namespace AccountManager.Logic
 {
-    class Facade
+    public class Facade
     {
         private ClientOperations iClient;
         private AccountOperations iAccount;

@@ -2,7 +2,7 @@
 
 namespace AccountManager.DAL
 {
-    interface IRepository<TEntity> where TEntity : class
+    public interface IRepository<TEntity> where TEntity : class
     {
 
         void Add(TEntity pEntity);

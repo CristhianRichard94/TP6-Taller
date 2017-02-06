@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace AccountManager.Logic
 {
-    class AccountOperations
+    public class AccountOperations
     {
         private UnitOfWork iUOW;
 
