@@ -8,10 +8,10 @@ namespace AccountManager.DAL.EntityFramework.Mappings
 
         public AccountMap()
         {
-            // Nombre de la tabla que tendrá la entidad, en este caso 'Account'.
+            //Account es el nombre de la tabla de la entidad
             this.ToTable("Account");
 
-            // Clave primaria de la entidad, indicando que la columna se llama 'AccountId' y que es autoincremental.
+            //Clave primaria, le asigna a la columna el nombre AccountId
             this.HasKey(pAccount => pAccount.Id)
                 .Property(pAccount => pAccount.Id)
                 .HasColumnName("AccountId")
@@ -22,7 +22,7 @@ namespace AccountManager.DAL.EntityFramework.Mappings
                 .IsRequired()
                 .HasMaxLength(30);
 
-            // Se establece la columna obligatoria (NOT NULL) 'OverdraftLimit' (límite de descubierto).
+            //Se asigna una columna OverdraftLimit que es el límite de descubierto
             this.Property(pAccount => pAccount.OverdraftLimit)
                 .IsRequired();
 
