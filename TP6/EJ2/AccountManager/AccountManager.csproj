@@ -84,7 +84,7 @@
     <Compile Include="DataTransferObject\ClientDTO.cs" />
     <Compile Include="Logic\AccountOperations.cs" />
     <Compile Include="Logic\ClientOperations.cs" />
-    <Compile Include="Logic\Fachada.cs" />
+    <Compile Include="Logic\Facade.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInterface\Cajero.cs">
