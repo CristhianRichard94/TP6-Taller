@@ -7,16 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AccountManager.Logic;
+using AccountManager.DAL.EntityFramework;
 
 namespace AccountManager.UserInterface
 {
     public partial class Main : Form
-    {
+    { 
+        
+        Facade iFacade;
+        UnitOfWork iUOW;
+
 
         public Main()
         {
+        
             InitializeComponent();
-        }
+            this.iUOW = new UnitOfWork(new AccountManagerDbContext());
+            this.iFacade = new Facade(this.iUOW);
+        
+    }
 
         private void Main_Load(object sender, EventArgs e)
         {
@@ -57,7 +67,8 @@ namespace AccountManager.UserInterface
 
         private void button4_Click(object sender, EventArgs e)
         {
-            CrearCuenta crearcu = new CrearCuenta();
+            
+            CrearCuenta crearcu = new CrearCuenta(iFacade);
             crearcu.Show();
         }
 

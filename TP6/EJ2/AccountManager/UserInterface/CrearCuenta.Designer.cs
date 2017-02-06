@@ -105,15 +105,18 @@
             // 
             // button1
             // 
+            this.button1.AccessibleName = "SeleccionarCliente";
             this.button1.Location = new System.Drawing.Point(431, 231);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 23);
             this.button1.TabIndex = 7;
             this.button1.Text = "Seleccionar...";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Crear
             // 
+            this.Crear.AccessibleName = "Guardar";
             this.Crear.Location = new System.Drawing.Point(445, 296);
             this.Crear.Name = "Crear";
             this.Crear.Size = new System.Drawing.Size(75, 23);
@@ -167,6 +170,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CrearCuenta";
             this.Text = "CrearCuenta";
+            this.Load += new System.EventHandler(this.CrearCuenta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
