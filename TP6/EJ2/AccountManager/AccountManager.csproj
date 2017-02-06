@@ -87,6 +87,36 @@
     <Compile Include="Logic\Fachada.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserInterface\Cajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\Cajero.Designer.cs">
+      <DependentUpon>Cajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CrearCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CrearCliente.Designer.cs">
+      <DependentUpon>CrearCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CrearCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CrearCuenta.Designer.cs">
+      <DependentUpon>CrearCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\ListarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ListarCliente.Designer.cs">
+      <DependentUpon>ListarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\ListarCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ListarCuenta.Designer.cs">
+      <DependentUpon>ListarCuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInterface\Main.cs">
       <SubType>Form</SubType>
     </Compile>

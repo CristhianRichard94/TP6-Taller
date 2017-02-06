@@ -31,5 +31,45 @@ namespace AccountManager.UserInterface
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CrearCliente crearcl = new CrearCliente();
+            crearcl.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ListarCliente listarcl= new ListarCliente();
+            listarcl.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CrearCuenta crearcu = new CrearCuenta();
+            crearcu.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ListarCuenta listarcu= new ListarCuenta();
+            listarcu.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Cajero cajero = new Cajero();
+            cajero.Show();
+        }
     }
 }
