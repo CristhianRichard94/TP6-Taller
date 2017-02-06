@@ -10,9 +10,11 @@ namespace AccountManager.UserInterface
         private Facade iFacade;
         private AccountDTO iAccount;
 
-        public CrearCuenta()
+        public CrearCuenta(Facade pFacade)
         {
-
+            InitializeComponent();
+            this.iFacade = pFacade;
+            textBox2.Text = iAccount.OverdraftLimit.ToString();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -42,6 +44,16 @@ namespace AccountManager.UserInterface
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrearCuenta_Load(object sender, EventArgs e)
         {
 
         }
