@@ -79,7 +79,7 @@ namespace AccountManager.UserInterface
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Cajero cajero = new Cajero();
+            Cajero cajero = new Cajero(iFacade);
             cajero.Show();
         }
     }

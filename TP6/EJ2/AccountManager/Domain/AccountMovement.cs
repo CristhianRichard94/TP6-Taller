@@ -13,10 +13,7 @@ namespace AccountManager.Domain
 
         public double Amount { get; set; }
 
-        public AccountMovement()
-        {
-
-        }
+        public AccountMovement()        {        }
 
         public AccountMovement(DateTime pDate, String pDescription, double pAmount)
         {

@@ -41,7 +41,17 @@ namespace AccountManager.UserInterface
         {
             var crearcl = new CrearCliente(iFacade, (ClientDTO)dataGridView1.SelectedRows[0].DataBoundItem);
             crearcl.Show();
-            ActualizarTabla();
+            crearcl.FormClosing += new FormClosingEventHandler(Form_FormClosing);
+        }
+
+        /// <summary>
+        /// Procedimientos que hará al cerrar la ventana
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.ActualizarTabla();
         }
 
         private void eliminarToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -68,6 +78,11 @@ namespace AccountManager.UserInterface
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void actualizarTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ActualizarTabla();
         }
     }
 }

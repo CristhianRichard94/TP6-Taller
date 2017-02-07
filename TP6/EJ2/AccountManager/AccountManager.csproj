@@ -124,6 +124,12 @@
     <Compile Include="UserInterface\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserInterface\Movimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\Movimientos.Designer.cs">
+      <DependentUpon>Movimientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInterface\SeleccionarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="UserInterface\Cajero.resx">
+      <DependentUpon>Cajero.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\CrearCliente.resx">
       <DependentUpon>CrearCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\Movimientos.resx">
+      <DependentUpon>Movimientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\SeleccionarCliente.resx">
       <DependentUpon>SeleccionarCliente.cs</DependentUpon>
