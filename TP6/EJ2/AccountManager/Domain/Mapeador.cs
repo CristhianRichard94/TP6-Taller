@@ -21,8 +21,8 @@ namespace AccountManager.Domain
         public Mapeador()
         {
             CreateMap<DTO.ClientDTO, Client>()
-                .ForMember(d => d.Document.Number, o => o.MapFrom(c => c.DocumentNumber))
-                .ForMember(d => d.Document.Type, o => o.MapFrom(c => c.DocumentType))
+                .ForMember(d => d.Document, o => o.MapFrom(c => new Document { Number=c.DocumentNumber,
+                                                                               Type=c.DocumentType }))
                 .ForMember(d => d.FirstName, o => o.MapFrom(c => c.FirstName))
                 .ForMember(d => d.LastName, o => o.MapFrom(c => c.LastName))
                 .ForMember(d => d.Id, o => o.MapFrom(c => c.Id));
