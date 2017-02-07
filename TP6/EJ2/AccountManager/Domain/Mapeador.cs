@@ -25,6 +25,13 @@ namespace AccountManager.Domain
                                                                                Type=c.DocumentType }))
                 .ForMember(d => d.FirstName, o => o.MapFrom(c => c.FirstName))
                 .ForMember(d => d.LastName, o => o.MapFrom(c => c.LastName))
+                .ForMember(d => d.Id, o => o.MapFrom(c => c.Id))
+                .ForMember(d => d.Accounts, o=> o.Ignore());
+            CreateMap<Client, DTO.ClientDTO>()
+                .ForMember(d => d.DocumentNumber, o => o.MapFrom(c => c.Document.Number))
+                .ForMember(d => d.DocumentType, o => o.MapFrom(c => c.Document.Type))
+                .ForMember(d => d.FirstName, o => o.MapFrom(c => c.FirstName))
+                .ForMember(d => d.LastName, o => o.MapFrom(c => c.LastName))
                 .ForMember(d => d.Id, o => o.MapFrom(c => c.Id));
         }
     }

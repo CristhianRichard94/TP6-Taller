@@ -169,7 +169,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CrearCliente";
-            this.Text = "CrearCliente";
+            this.Text = "Crear o Modificar Cliente";
             this.Load += new System.EventHandler(this.CrearCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

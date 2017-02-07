@@ -85,7 +85,7 @@ namespace AccountManager.Logic
 
         public ClientDTO GetClient(int pId)
         {
-            var client = this.iUOW.ClientRepository.Get(pId);
+            Client client = this.iUOW.ClientRepository.Get(pId);
             if (client == null)
             {
                 throw new Exception("No existe el cliente que busca");

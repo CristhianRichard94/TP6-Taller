@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using AccountManager.DTO;
 using AccountManager.Logic;
 using AccountManager.Domain;
+using AutoMapper;
 
 namespace AccountManager.UserInterface
 {
@@ -75,11 +76,14 @@ namespace AccountManager.UserInterface
                 if (this.iClient.Id==-1)
                 {
                     iFacade.Client.CreateClient(this.iClient);
+                    MessageBox.Show("Se ha realizado la operacion sobre el id: " + (iFacade.Client.GetAllClients()).Last().Id);
                 }
                 else
                 {
                     iFacade.Client.UpdateClient(this.iClient);
+                    MessageBox.Show("Se ha realizado la operacion sobre el id: " + iClient.Id.ToString());
                 }
+
                 this.Close();
             }
             catch (Exception excepcion)
