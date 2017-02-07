@@ -55,14 +55,13 @@ namespace AccountManager.UserInterface
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CrearCliente crearcl = new CrearCliente(iFacade);
-            crearcl.Show();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ListarCliente listarcl= new ListarCliente();
-            listarcl.Show();
+            ListaClientes listacl= new ListaClientes(iFacade);
+            listacl.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
