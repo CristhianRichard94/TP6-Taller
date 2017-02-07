@@ -12,7 +12,7 @@ namespace AccountManager.DAL.EntityFramework
 
         public DbSet<AccountMovement> AccountMovements { get; set; }
 
-        public AccountManagerDbContext() : base("AccountManagerContext")
+        public AccountManagerDbContext() : base("AccountManagerDbContext")
         {
             //Database.SetInitializer<AccountManagerDbContext>(new CreateDatabaseIfNotExists<AccountManagerDbContext>());
             //Database.SetInitializer<AccountManagerDbContext>(new DropCreateDatabaseIfModelChanges<AccountManagerDbContext>());

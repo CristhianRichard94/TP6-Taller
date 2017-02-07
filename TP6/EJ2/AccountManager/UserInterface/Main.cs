@@ -55,7 +55,7 @@ namespace AccountManager.UserInterface
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CrearCliente crearcl = new CrearCliente();
+            CrearCliente crearcl = new CrearCliente(iFacade);
             crearcl.Show();
         }
 

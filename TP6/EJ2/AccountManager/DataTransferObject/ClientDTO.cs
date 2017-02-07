@@ -1,5 +1,6 @@
 ﻿using System;
 using AccountManager.Domain;
+using System.Collections.Generic;
 
 
 namespace AccountManager.DTO
@@ -10,8 +11,9 @@ namespace AccountManager.DTO
         public int Id { get; set; }
         public String LastName { get; set; }
         public String FirstName { get; set; }
-        public String DocumentNumber { get; set; }
-        public DocumentType DocumentType { get; set; }
+        public Document Document { get; set; }
+        public virtual IList<Account> Accounts { get; set; }
+
 
         public ClientDTO()
         {

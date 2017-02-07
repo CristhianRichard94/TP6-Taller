@@ -82,6 +82,7 @@
     <Compile Include="DataTransferObject\AccountDTO.cs" />
     <Compile Include="DataTransferObject\AccountMovementDTO.cs" />
     <Compile Include="DataTransferObject\ClientDTO.cs" />
+    <Compile Include="Domain\Mapeador.cs" />
     <Compile Include="Logic\AccountOperations.cs" />
     <Compile Include="Logic\ClientOperations.cs" />
     <Compile Include="Logic\Facade.cs" />

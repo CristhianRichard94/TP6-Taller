@@ -39,58 +39,51 @@ namespace AccountManager.UserInterface
             }
             this.textBox1.Text = this.iClient.FirstName;
             this.textBox2.Text = this.iClient.LastName;
-            this.textBox3.Text = this.iClient.DocumentNumber;
-            this.comboBox1.SelectedIndex = this.iClient.DocumentType.GetHashCode();
+            this.textBox3.Text = this.iClient.Document.Number;
+            this.comboBox1.SelectedIndex = this.iClient.Document.Type.GetHashCode();
         }
 
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(textBox1.Text))
+            try
             {
-                throw new Exception("No se ha ingresado nombre de cliente");
-            }
-            if (String.IsNullOrWhiteSpace(textBox2.Text))
-            {
-                throw new Exception("No se ha ingresado apellido de cliente");
-            }
-            if (String.IsNullOrWhiteSpace(textBox3.Text))
-            {
-                throw new Exception("No se ha ingresado Numero de documento");
-            }
-            if (comboBox1.SelectedIndex< 0)
-            {
-                throw new Exception("No se ha ingresado tipo de documento");
-            }
-            this.iClient.FirstName = this.textBox1.Text;
-            this.iClient.LastName = this.textBox2.Text;
-            this.iClient.DocumentNumber = this.textBox3.Text;
-            this.iClient.DocumentType = (DocumentType)this.comboBox1.SelectedIndex;
 
-            if (this.iClient.Id > 0)
-            {
-                try
+                this.iClient.FirstName = this.textBox1.Text;
+                this.iClient.LastName = this.textBox2.Text;
+                this.iClient.Document.Number = this.textBox3.Text;
+                this.iClient.Document.Type = (DocumentType)this.comboBox1.SelectedIndex;
+                if (String.IsNullOrWhiteSpace(textBox1.Text))
+                {
+                    throw new Exception("No se ha ingresado nombre de cliente");
+                }
+                if (String.IsNullOrWhiteSpace(textBox2.Text))
+                {
+                    throw new Exception("No se ha ingresado apellido de cliente");
+                }
+                if (String.IsNullOrWhiteSpace(textBox3.Text))
+                {
+                    throw new Exception("No se ha ingresado Numero de documento");
+                }
+                if (comboBox1.SelectedIndex < 0)
+                {
+                    throw new Exception("No se ha ingresado tipo de documento");
+                }
+                if (this.iClient.Id > 0)
                 {
                     iFacade.Client.UpdateClient(this.iClient);
                     this.Close();
                 }
-                catch (Exception exception)
+                else
                 {
-                    MessageBox.Show("Se ha producido un error\n" + exception.Message);
-                }
-            }
-            else
-            {
-                try
-                {
+                    this.iClient.Accounts = new List<Account>();
                     iFacade.Client.CreateClient(this.iClient);
                     this.Close();
                 }
-                catch (Exception exception)
-                {
-                    MessageBox.Show("Se ha producido un error\n" + exception.Message);
-                }
-
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.Message);
             }
         }
 

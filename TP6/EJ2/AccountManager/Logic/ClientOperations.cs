@@ -24,7 +24,7 @@ namespace AccountManager.Logic
         {
             try
             {
-                var client = Mapper.Map<Client>(pClient);
+                Client client = Mapper.Map<Client>(pClient);
                 this.iUOW.ClientRepository.Add(client);
                 this.iUOW.Complete();
             }
@@ -45,11 +45,11 @@ namespace AccountManager.Logic
             {
                 throw new Exception("No se ha ingresado nuevo Apellido");
             }
-            if (String.IsNullOrWhiteSpace(pClient.DocumentNumber))
+            if (String.IsNullOrWhiteSpace(pClient.Document.Number))
             {
                 throw new Exception("No se ha ingresado nuevo numero de Documento");
             }
-            if (pClient.DocumentType < 0)
+            if (pClient.Document.Type < 0)
             {
                 throw new Exception("No se ha ingresado nuevo tipo de Documento");
             }
@@ -62,8 +62,8 @@ namespace AccountManager.Logic
 
             client.FirstName = pClient.FirstName;
             client.LastName = pClient.LastName;
-            client.Document = new Document { Number = pClient.DocumentNumber,
-                                             Type = pClient.DocumentType };
+            client.Document = new Document { Number = pClient.Document.Number,
+                                             Type = pClient.Document.Type };
             this.iUOW.Complete();
         }
 
