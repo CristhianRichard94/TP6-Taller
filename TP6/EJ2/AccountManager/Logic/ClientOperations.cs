@@ -45,11 +45,11 @@ namespace AccountManager.Logic
             {
                 throw new Exception("No se ha ingresado nuevo Apellido");
             }
-            if (String.IsNullOrWhiteSpace(pClient.Document.Number))
+            if (String.IsNullOrWhiteSpace(pClient.DocumentNumber))
             {
                 throw new Exception("No se ha ingresado nuevo numero de Documento");
             }
-            if (pClient.Document.Type < 0)
+            if (pClient.DocumentType < 0)
             {
                 throw new Exception("No se ha ingresado nuevo tipo de Documento");
             }
@@ -62,8 +62,8 @@ namespace AccountManager.Logic
 
             client.FirstName = pClient.FirstName;
             client.LastName = pClient.LastName;
-            client.Document = new Document { Number = pClient.Document.Number,
-                                             Type = pClient.Document.Type };
+            client.Document = new Document { Number = pClient.DocumentNumber,
+                                             Type = pClient.DocumentType };
             this.iUOW.Complete();
         }
 

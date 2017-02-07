@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AccountManager.DAL.EntityFramework;
+using AccountManager.Domain;
 
 namespace AccountManager.Logic
 {
@@ -14,6 +15,7 @@ namespace AccountManager.Logic
 
         public Facade(UnitOfWork pUOW)
         {
+            AutoMapper.Mapper.Initialize(c => c.AddProfile(new Mapeador()));
             this.iClient = new ClientOperations(pUOW);
             this.iAccount = new AccountOperations(pUOW);
         }

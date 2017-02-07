@@ -36,11 +36,12 @@ namespace AccountManager.UserInterface
             else
             {
                 this.textBox4.Text = this.iClient.Id.ToString();
+                this.textBox1.Text = this.iClient.FirstName;
+                this.textBox2.Text = this.iClient.LastName;
+                this.textBox3.Text = this.iClient.DocumentNumber;
+                this.comboBox1.SelectedIndex = this.iClient.DocumentType.GetHashCode();
             }
-            this.textBox1.Text = this.iClient.FirstName;
-            this.textBox2.Text = this.iClient.LastName;
-            this.textBox3.Text = this.iClient.Document.Number;
-            this.comboBox1.SelectedIndex = this.iClient.Document.Type.GetHashCode();
+
         }
 
 
@@ -48,11 +49,7 @@ namespace AccountManager.UserInterface
         {
             try
             {
-
-                this.iClient.FirstName = this.textBox1.Text;
-                this.iClient.LastName = this.textBox2.Text;
-                this.iClient.Document.Number = this.textBox3.Text;
-                this.iClient.Document.Type = (DocumentType)this.comboBox1.SelectedIndex;
+                
                 if (String.IsNullOrWhiteSpace(textBox1.Text))
                 {
                     throw new Exception("No se ha ingresado nombre de cliente");
@@ -69,17 +66,21 @@ namespace AccountManager.UserInterface
                 {
                     throw new Exception("No se ha ingresado tipo de documento");
                 }
-                if (this.iClient.Id > 0)
+
+                this.iClient.FirstName = this.textBox1.Text;
+                this.iClient.LastName = this.textBox2.Text;
+                this.iClient.DocumentNumber = this.textBox3.Text;
+                this.iClient.DocumentType = (DocumentType)this.comboBox1.SelectedIndex;
+
+                if (this.iClient.Id==-1)
                 {
-                    iFacade.Client.UpdateClient(this.iClient);
-                    this.Close();
+                    iFacade.Client.CreateClient(this.iClient);
                 }
                 else
                 {
-                    this.iClient.Accounts = new List<Account>();
-                    iFacade.Client.CreateClient(this.iClient);
-                    this.Close();
+                    iFacade.Client.UpdateClient(this.iClient);
                 }
+                this.Close();
             }
             catch (Exception excepcion)
             {
