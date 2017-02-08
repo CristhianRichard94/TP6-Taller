@@ -39,5 +39,15 @@ namespace AccountManager.UserInterface
         {
             this.Close();
         }
+
+        private void Movimientos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void actualizarTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ActualizarTabla();
+        }
     }
 }

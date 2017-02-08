@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace AccountManager.DTO
 {
+    
     public class ClientDTO
     {
 

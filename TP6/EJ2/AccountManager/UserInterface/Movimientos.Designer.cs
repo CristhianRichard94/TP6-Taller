@@ -35,6 +35,7 @@
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarTablaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +83,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.actualizarTablaToolStripMenuItem,
             this.volverToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -96,6 +98,13 @@
             this.volverToolStripMenuItem.Text = "Volver";
             this.volverToolStripMenuItem.Click += new System.EventHandler(this.volverToolStripMenuItem_Click);
             // 
+            // actualizarTablaToolStripMenuItem
+            // 
+            this.actualizarTablaToolStripMenuItem.Name = "actualizarTablaToolStripMenuItem";
+            this.actualizarTablaToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.actualizarTablaToolStripMenuItem.Text = "Actualizar Tabla";
+            this.actualizarTablaToolStripMenuItem.Click += new System.EventHandler(this.actualizarTablaToolStripMenuItem_Click);
+            // 
             // Movimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -106,6 +115,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Movimientos";
             this.Text = "Movimientos";
+            this.Load += new System.EventHandler(this.Movimientos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -123,5 +133,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.ToolStripMenuItem actualizarTablaToolStripMenuItem;
     }
 }
