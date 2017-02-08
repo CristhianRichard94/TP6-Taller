@@ -20,19 +20,32 @@ namespace AccountManager.Domain
 
         public Mapeador()
         {
-            CreateMap<DTO.ClientDTO, Client>()
+            CreateMap<ClientDTO, Client>()
                 .ForMember(d => d.Document, o => o.MapFrom(c => new Document { Number=c.DocumentNumber,
                                                                                Type=c.DocumentType }))
                 .ForMember(d => d.FirstName, o => o.MapFrom(c => c.FirstName))
                 .ForMember(d => d.LastName, o => o.MapFrom(c => c.LastName))
                 .ForMember(d => d.Id, o => o.MapFrom(c => c.Id))
                 .ForMember(d => d.Accounts, o=> o.Ignore());
-            CreateMap<Client, DTO.ClientDTO>()
+            CreateMap<Client, ClientDTO>()
                 .ForMember(d => d.DocumentNumber, o => o.MapFrom(c => c.Document.Number))
                 .ForMember(d => d.DocumentType, o => o.MapFrom(c => c.Document.Type))
                 .ForMember(d => d.FirstName, o => o.MapFrom(c => c.FirstName))
                 .ForMember(d => d.LastName, o => o.MapFrom(c => c.LastName))
                 .ForMember(d => d.Id, o => o.MapFrom(c => c.Id));
+
+            CreateMap<AccountDTO, Account>()
+                .ForMember(d => d.Id, o => o.MapFrom(c => c.Id))
+                .ForMember(d => d.Name, o => o.MapFrom(c => c.Name))
+                .ForMember(d => d.OverdraftLimit, o => o.MapFrom(c => c.OverdraftLimit))
+                .ForMember(d => d.Client, o => o.Ignore())
+                .ForMember(d => d.Movements, o => o.Ignore());
+
+            CreateMap<Account, AccountDTO>()
+                .ForMember(d => d.Id, o => o.MapFrom(c => c.Id))
+                .ForMember(d => d.Name, o => o.MapFrom(c => c.Name))
+                .ForMember(d => d.OverdraftLimit, o => o.MapFrom(c => c.OverdraftLimit))
+                .ForMember(d => d.ClientId, o => o.MapFrom(c => c.Client.Id));
         }
     }
 }
