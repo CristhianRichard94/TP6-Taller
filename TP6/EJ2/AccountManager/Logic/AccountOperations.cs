@@ -210,8 +210,8 @@ namespace AccountManager.Logic
         /// <param name="pC"></param>
         public IEnumerable<AccountMovementDTO> GetLastMovements(AccountDTO pAccount, int pC = 0)
         {
-            IEnumerable<AccountMovement> list;
-            var account = this.iUOW.AccountRepository.Get(pAccount.Id);
+            IEnumerable<AccountMovement> movs;
+            Account account = this.iUOW.AccountRepository.Get(pAccount.Id);
             if (account == null)
             {
                 throw new Exception("La cuenta es inexistente");
@@ -220,11 +220,11 @@ namespace AccountManager.Logic
             {
                 if (pC > 0)
                 {
-                    list = this.iUOW.AccountRepository.GetLastMovements(account, pC);
+                    movs = this.iUOW.AccountRepository.GetLastMovements(account, pC);
                 }
                 else
                 {
-                    list = this.iUOW.AccountRepository.GetLastMovements(account);
+                    movs = this.iUOW.AccountRepository.GetLastMovements(account);
                 }
             }
             catch (Exception)
@@ -232,7 +232,7 @@ namespace AccountManager.Logic
                 throw new Exception("Error al obtener los ultimos movimientos");
             }
 
-            return Mapper.Map<IEnumerable<AccountMovementDTO>>(list);
+            return Mapper.Map<IEnumerable<AccountMovementDTO>>(movs);
         }
     }
 }

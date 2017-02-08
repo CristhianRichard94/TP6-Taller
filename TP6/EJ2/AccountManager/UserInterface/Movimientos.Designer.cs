@@ -106,6 +106,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Movimientos";
             this.Text = "Movimientos";
+            this.Load += new System.EventHandler(this.Movimientos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

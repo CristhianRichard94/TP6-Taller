@@ -128,7 +128,7 @@ namespace AccountManager.UserInterface
             double monto;
             try
             {
-                monto = Convert.ToDouble(textBox2.Text);
+                monto = Convert.ToDouble(textBox2.Text)*-1;
                 iFacade.Account.NewMovement(iAccount, "Retiro", monto);
                 groupBox2.Visible = true;
                 groupBox4.Visible = false;
@@ -145,7 +145,7 @@ namespace AccountManager.UserInterface
             double monto;
             try
             {
-                monto = Convert.ToDouble(textBox2.Text) * -1;
+                monto = Convert.ToDouble(textBox2.Text);
                 iFacade.Account.NewMovement(iAccount, "Deposito", monto);
                 groupBox2.Visible = true;
                 groupBox4.Visible = false;

@@ -46,6 +46,18 @@ namespace AccountManager.Domain
                 .ForMember(d => d.Name, o => o.MapFrom(c => c.Name))
                 .ForMember(d => d.OverdraftLimit, o => o.MapFrom(c => c.OverdraftLimit))
                 .ForMember(d => d.ClientId, o => o.MapFrom(c => c.Client.Id));
+
+            CreateMap<AccountMovement, AccountMovementDTO>()
+                .ForMember(d => d.Id, o => o.MapFrom(c => c.Id))
+                .ForMember(d => d.Date, o => o.MapFrom(c => c.Date))
+                .ForMember(d => d.Description, o => o.MapFrom(c => c.Description))
+                .ForMember(d => d.Amount, o => o.MapFrom(c => c.Amount));
+
+            CreateMap<AccountMovementDTO, AccountMovement>()
+                .ForMember(d => d.Id, o => o.MapFrom(c => c.Id))
+                .ForMember(d => d.Date, o => o.MapFrom(c => c.Date))
+                .ForMember(d => d.Description, o => o.MapFrom(c => c.Description))
+                .ForMember(d => d.Amount, o => o.MapFrom(c => c.Amount));
         }
     }
 }

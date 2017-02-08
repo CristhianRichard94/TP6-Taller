@@ -39,5 +39,10 @@ namespace AccountManager.UserInterface
         {
             this.Close();
         }
+
+        private void Movimientos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
