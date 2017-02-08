@@ -38,9 +38,9 @@ namespace AccountManager.UserInterface
             {
                 MessageBox.Show("El ID ingresado es inválido");
             }
+            this.iAccount = iFacade.Account.GetAccount(id);
             try
             {
-                AccountDTO account = iFacade.Account.GetAccount(id);
                 groupBox1.Visible = false;
                 groupBox2.Visible = true;
             }

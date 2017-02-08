@@ -191,7 +191,7 @@ namespace AccountManager.Logic
             var account = this.iUOW.AccountRepository.Get(pAccount.Id);
             if (account == null)
             {
-                throw new Exception("La cuenta es inexistente");
+                throw new Exception("La cuenta no existe");
             }
             try
             {
