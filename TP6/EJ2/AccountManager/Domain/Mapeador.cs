@@ -7,7 +7,9 @@ using AutoMapper;
 using AccountManager.DTO;
 
 namespace AccountManager.Domain
-{
+{/// <summary>
+///Clase mapeadora, se encarga de detallar el mapeo entre las distintas clases.
+/// </summary>
     class Mapeador : Profile
     {
         public override string ProfileName

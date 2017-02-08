@@ -17,7 +17,10 @@ namespace AccountManager.UserInterface
     {
         private Facade iFacade;
         private string iId;
-
+        /// <summary>
+        /// Ventana para seleccionar un cliente existente
+        /// </summary>
+        /// <param name="pFacade"></param>
         public SeleccionarCliente(Facade pFacade)
         {
             

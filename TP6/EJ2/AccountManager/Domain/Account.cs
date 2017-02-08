@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 
 namespace AccountManager.Domain
-{
+{/// <summary>
+/// Clase que representa una cuenta bancaria
+/// </summary>
     public class Account
     {
 

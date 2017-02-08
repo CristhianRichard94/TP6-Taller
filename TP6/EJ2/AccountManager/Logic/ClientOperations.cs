@@ -19,7 +19,10 @@ namespace AccountManager.Logic
         {
             this.iUOW = pUnit;
         }
-    
+    /// <summary>
+    /// Metodo para crear un cliente
+    /// </summary>
+    /// <param name="pClient"></param>
         public void CreateClient (ClientDTO pClient)
         {
             try
@@ -33,10 +36,13 @@ namespace AccountManager.Logic
                 throw new Exception("Se ha producido un error al Crear el Cliente");
             }
         }
-
+        /// <summary>
+        /// Metodo que modifica un cliente seleccionado
+        /// </summary>
+        /// <param name="pClient">cliente seleccionado</param>
         public void UpdateClient(ClientDTO pClient)
         {
-
+            //Se controlan que esten todos los campos 
             if (String.IsNullOrWhiteSpace(pClient.FirstName))
             {
                 throw new Exception("No se ha ingresado nuevo Nombre");
@@ -66,7 +72,10 @@ namespace AccountManager.Logic
                                              Type = pClient.DocumentType };
             this.iUOW.Complete();
         }
-
+        /// <summary>
+        /// Metodo para eliminar un cliente seleccionado
+        /// </summary>
+        /// <param name="pClient">cliente seleccionado</param>
         public void DeleteClient(ClientDTO pClient)
         {
             Client client;
@@ -82,6 +91,10 @@ namespace AccountManager.Logic
             this.iUOW.ClientRepository.Remove(client);
             this.iUOW.Complete();
         }
+        /// <summary>
+        /// Metodo para obtener un cliente teniendo un ID
+        /// </summary>
+        /// <param name="pId">El id con el que busca al cliente</param>
 
         public ClientDTO GetClient(int pId)
         {
@@ -92,7 +105,9 @@ namespace AccountManager.Logic
             }
             return Mapper.Map<ClientDTO>(client);
         }
-
+        /// <summary>
+        /// Metodo para obtener todos los clientes existentes
+        /// </summary>
         public IEnumerable<ClientDTO> GetAllClients()
         {
             IEnumerable<Client> list;

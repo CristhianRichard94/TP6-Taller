@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AccountManager.DTO
-{
+{ /// <summary>
+  /// La clase DTO se utiliza para comunicar la fachada con la interfaz gráfica
+  /// </summary>
     public class AccountDTO
     {
 

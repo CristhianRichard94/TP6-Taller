@@ -15,6 +15,10 @@ namespace AccountManager.UserInterface
     public partial class ListarCuenta : Form
     {
         public Facade iFacade;
+        /// <summary>
+        /// Listado de cuentas existentes
+        /// </summary>
+        /// <param name="pFacade"></param>
         public ListarCuenta(Facade pFacade)
         {
             InitializeComponent();

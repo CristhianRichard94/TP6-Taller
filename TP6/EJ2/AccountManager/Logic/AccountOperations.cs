@@ -27,7 +27,7 @@ namespace AccountManager.Logic
             {
                 throw new Exception("Introduzca un nombre para la cuenta");
             }
-            ///Controla el límite al descubierto
+            ///Controla el límite al descubierto, no puede superar los mil pesos
             if (pAccount.OverdraftLimit > 1000)
             {
                 throw new Exception("El límite de descubierto es 1000");
@@ -68,7 +68,7 @@ namespace AccountManager.Logic
             {
                 throw new Exception("Ingrese un Nombre para la cuenta");
             }
-            //Controla el límite de descubierto
+            //Controla el límite de descubierto, no puede superar los mil pesos
             if (pAccount.OverdraftLimit < 1000)
             {
                 throw new Exception("El límite de descubierto es 1000");
@@ -114,7 +114,6 @@ namespace AccountManager.Logic
         /// Busca una cuenta por su ID
         /// </summary>
         /// <param name="pId"></param>
-        /// <returns></returns>
         public AccountDTO GetAccount(int pId)
         {
             var account = this.iUOW.AccountRepository.Get(pId);

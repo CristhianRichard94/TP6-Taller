@@ -1,7 +1,9 @@
 ﻿using System;
 
 namespace AccountManager.Domain
-{
+{/// <summary>
+/// Clase que representa los movimientos de una cuenta
+/// </summary>
     public class AccountMovement
     {
 

@@ -18,7 +18,11 @@ namespace AccountManager.UserInterface
     {
         private ClientDTO iClient;
         public Facade iFacade;
-
+        /// <summary>
+        /// Ventana para ingresar a crear un cliente
+        /// </summary>
+        /// <param name="pFacade"></param>
+        /// <param name="pClient"></param>
         public CrearCliente(Facade pFacade, ClientDTO pClient = null)
         {
             InitializeComponent();

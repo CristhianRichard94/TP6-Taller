@@ -16,7 +16,10 @@ namespace AccountManager.UserInterface
     {
         public Facade iFacade;
 
-
+        /// <summary>
+        /// Ventana para gestionar los clientes
+        /// </summary>
+        /// <param name="pFacade"></param>
         public ListaClientes(Facade pFacade)
         {
             InitializeComponent();

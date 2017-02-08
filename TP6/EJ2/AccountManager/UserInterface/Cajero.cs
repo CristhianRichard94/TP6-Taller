@@ -16,7 +16,10 @@ namespace AccountManager.UserInterface
     {
         public Facade iFacade;
         private AccountDTO iAccount;
-
+        /// <summary>
+        /// Cajero para ingresar a ver detalles de una cuenta
+        /// </summary>
+        /// <param name="pFacade"></param>
         public Cajero(Facade pFacade)
         {
             InitializeComponent();
@@ -26,7 +29,7 @@ namespace AccountManager.UserInterface
             groupBox4.Visible = false;
             this.iFacade = pFacade;
         }
-
+      
         private void button1_Click(object sender, EventArgs e)
         {
             int id=0;
@@ -128,15 +131,15 @@ namespace AccountManager.UserInterface
             double monto;
             try
             {
-                monto = Convert.ToDouble(textBox2.Text)*-1;
+                monto = Convert.ToDouble(textBox2.Text)* -1;
                 iFacade.Account.NewMovement(iAccount, "Retiro", monto);
                 groupBox2.Visible = true;
                 groupBox4.Visible = false;
-                MessageBox.Show("Se ha Realizado el Retiro");
+                MessageBox.Show("Se ha Realizado el retiro");
             }
             catch (Exception)
             {
-                MessageBox.Show("Se ha producido un error al realizar la operacion");
+                MessageBox.Show("Se ha producido un error al realizar la operación");
             }
         }
 
@@ -149,11 +152,11 @@ namespace AccountManager.UserInterface
                 iFacade.Account.NewMovement(iAccount, "Deposito", monto);
                 groupBox2.Visible = true;
                 groupBox4.Visible = false;
-                MessageBox.Show("Se ha Realizado el Deposito");
+                MessageBox.Show("Se ha Realizado el depósito");
             }
             catch (Exception)
             {
-                MessageBox.Show("Se ha producido un error al realizar la operacion");
+                MessageBox.Show("Se ha producido un error al realizar la operación");
             }
         }
     }

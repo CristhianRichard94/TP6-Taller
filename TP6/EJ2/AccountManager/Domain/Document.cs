@@ -1,7 +1,9 @@
 ﻿using System;
 
 namespace AccountManager.Domain
-{
+{/// <summary>
+/// Clase que representa el documento de un cliente
+/// </summary>
     public class Document
     {
 

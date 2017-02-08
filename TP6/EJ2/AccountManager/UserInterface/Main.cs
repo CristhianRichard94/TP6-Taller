@@ -18,7 +18,9 @@ namespace AccountManager.UserInterface
         Facade iFacade;
         UnitOfWork iUOW;
 
-
+        /// <summary>
+        /// Menú principal del programa
+        /// </summary>
         public Main()
         {
         
@@ -42,7 +44,11 @@ namespace AccountManager.UserInterface
         {
 
         }
-
+        /// <summary>
+        /// boton salir
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -57,7 +63,11 @@ namespace AccountManager.UserInterface
         {
 
         }
-
+        /// <summary>
+        /// Gestion de clientes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             ListaClientes listacl= new ListaClientes(iFacade);
@@ -71,13 +81,21 @@ namespace AccountManager.UserInterface
             listacu.Show();
             
         }
-
+        /// <summary>
+        /// Gestion de cuentas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button5_Click(object sender, EventArgs e)
         {
             ListarCuenta listarcu= new ListarCuenta(iFacade);
             listarcu.Show();
         }
-
+        /// <summary>
+        /// Cajero
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button6_Click(object sender, EventArgs e)
         {
             Cajero cajero = new Cajero(iFacade);

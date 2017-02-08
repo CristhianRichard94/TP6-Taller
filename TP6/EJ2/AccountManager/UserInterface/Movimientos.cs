@@ -16,7 +16,11 @@ namespace AccountManager.UserInterface
     {
         public Facade iFacade;
         private AccountDTO iAccount;
-
+        /// <summary>
+        /// Listado de los movimientos de una cuenta
+        /// </summary>
+        /// <param name="pFacade"></param>
+        /// <param name="pAccount"></param>
         public Movimientos(Facade pFacade, AccountDTO pAccount)
         {
             InitializeComponent();

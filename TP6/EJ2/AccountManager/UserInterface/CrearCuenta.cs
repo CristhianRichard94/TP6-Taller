@@ -13,7 +13,11 @@ namespace AccountManager.UserInterface
     {
         private Facade iFacade;
         private AccountDTO iAccount;
-
+/// <summary>
+/// ventana para ingresar a crear una cuenta
+/// </summary>
+/// <param name="pFacade"></param>
+/// <param name="pAccount"></param>
         public CrearCuenta(Facade pFacade, AccountDTO pAccount=null)
         {
             InitializeComponent();
