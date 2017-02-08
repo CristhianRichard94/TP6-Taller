@@ -21,7 +21,12 @@ namespace AccountManager.UserInterface
             InitializeComponent();
             this.iFacade = pFacade;
             dataGridView1.DataSource = pFacade.Account.GetAllAccounts();
-           
+
+            this.dataGridView1.Columns[1].HeaderText = "Nombre";
+            this.dataGridView1.Columns[3].HeaderText = "Límite Descubierto";
+            this.dataGridView1.Columns[2].HeaderText = "Id Cliente";
+
+
         }
         public void ActualizarTabla()
         {
@@ -46,7 +51,7 @@ namespace AccountManager.UserInterface
         private void crearToolStripMenuItem_Crear_Click(object sender, EventArgs e)
         {
             CrearCuenta crearcu = new CrearCuenta(iFacade);
-            crearcu.Show();
+            crearcu.ShowDialog();
             ActualizarTabla();
         }
 
@@ -77,6 +82,9 @@ namespace AccountManager.UserInterface
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }

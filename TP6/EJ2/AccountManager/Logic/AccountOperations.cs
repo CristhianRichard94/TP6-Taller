@@ -159,6 +159,7 @@ namespace AccountManager.Logic
             }
 
             return Mapper.Map<IEnumerable<AccountDTO>>(list);
+            
         }
 
         /// <summary>

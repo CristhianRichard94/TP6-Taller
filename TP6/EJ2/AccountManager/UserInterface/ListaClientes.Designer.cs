@@ -33,6 +33,7 @@
             this.crearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarTablaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,7 +41,6 @@
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DocumentNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DocumentType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actualizarTablaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(548, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(544, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -88,6 +88,13 @@
             this.eliminarToolStripMenuItem1.Text = "Eliminar";
             this.eliminarToolStripMenuItem1.Click += new System.EventHandler(this.eliminarToolStripMenuItem1_Click);
             // 
+            // actualizarTablaToolStripMenuItem
+            // 
+            this.actualizarTablaToolStripMenuItem.Name = "actualizarTablaToolStripMenuItem";
+            this.actualizarTablaToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.actualizarTablaToolStripMenuItem.Text = "Actualizar Tabla";
+            this.actualizarTablaToolStripMenuItem.Click += new System.EventHandler(this.actualizarTablaToolStripMenuItem_Click);
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
@@ -98,6 +105,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -110,7 +118,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(544, 259);
+            this.dataGridView1.Size = new System.Drawing.Size(544, 329);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -144,18 +152,11 @@
             this.DocumentType.HeaderText = "Tipo Doc";
             this.DocumentType.Name = "DocumentType";
             // 
-            // actualizarTablaToolStripMenuItem
-            // 
-            this.actualizarTablaToolStripMenuItem.Name = "actualizarTablaToolStripMenuItem";
-            this.actualizarTablaToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
-            this.actualizarTablaToolStripMenuItem.Text = "Actualizar Tabla";
-            this.actualizarTablaToolStripMenuItem.Click += new System.EventHandler(this.actualizarTablaToolStripMenuItem_Click);
-            // 
             // ListaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 289);
+            this.ClientSize = new System.Drawing.Size(544, 356);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;

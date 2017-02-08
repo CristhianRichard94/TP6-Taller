@@ -74,7 +74,7 @@ namespace AccountManager.UserInterface
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ListarCuenta listarcu= new ListarCuenta();
+            ListarCuenta listarcu= new ListarCuenta(iFacade);
             listarcu.Show();
         }
 

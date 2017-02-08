@@ -57,12 +57,12 @@ namespace AccountManager.UserInterface
         private void eliminarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
              var result = MessageBox.Show("¿Desea eliminar al cliente?", "Eliminar", MessageBoxButtons.YesNo);
-             if (result == DialogResult.Yes)
-             {
-            iFacade.Client.DeleteClient(((ClientDTO)dataGridView1.SelectedRows[0].DataBoundItem));
+            if (result == DialogResult.Yes)
+            {
+                iFacade.Client.DeleteClient(((ClientDTO)dataGridView1.SelectedRows[0].DataBoundItem));
+            }
 
-                }
-                ActualizarTabla();
+            ActualizarTabla();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

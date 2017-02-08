@@ -160,8 +160,9 @@
             // 
             // CrearCuenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(544, 356);
             this.Controls.Add(this.textBox4_id);
             this.Controls.Add(this.label5);
@@ -175,7 +176,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(560, 395);
+            this.MinimumSize = new System.Drawing.Size(560, 395);
             this.Name = "CrearCuenta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "CrearCuenta";
             this.Load += new System.EventHandler(this.CrearCuenta_Load);
             this.ResumeLayout(false);

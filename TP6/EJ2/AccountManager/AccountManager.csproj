@@ -165,6 +165,9 @@
     <EmbeddedResource Include="UserInterface\ListaCuentas.resx">
       <DependentUpon>ListaCuentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ListarCuenta.resx">
+      <DependentUpon>ListarCuenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

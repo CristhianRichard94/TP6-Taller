@@ -17,28 +17,17 @@ namespace AccountManager.UserInterface
         public CrearCuenta(Facade pFacade, AccountDTO pAccount=null)
         {
             InitializeComponent();
-            textBox2.Text = iAccount.OverdraftLimit.ToString();
             iFacade = pFacade;
             this.iAccount = pAccount;
            
             ShowAccount();
-         
-
-            /* if (this.iAccount == null)
-             {
-                 this.iAccount = new AccountDTO();
-             }
-             else
-             {
-                 textBox4_id.Text = iAccount.Id.ToString();
-                // textBox3.Text = 
-             }*/
-
-
+                  
         }
 
         private void ShowAccount()
-        {
+
+
+           {
             if (this.iAccount == null)
             {
                 this.iAccount = new AccountDTO();
@@ -47,11 +36,10 @@ namespace AccountManager.UserInterface
             {
                 textBox4_id.Text = iAccount.Id.ToString();
                 textBox1_Nombre.Text = iAccount.Name;
-                textBox2.Text = iAccount.OverdraftLimit.ToString();
-                textBox3.Text = iAccount.ClientId.ToString();
-               
+                              
             }
-            
+            textBox2.Text = iAccount.OverdraftLimit.ToString();
+            textBox3.Text = iAccount.ClientId.ToString();
 
         }
 
@@ -88,7 +76,7 @@ namespace AccountManager.UserInterface
                 if (this.iAccount.Id == -1)
                     {
                         iFacade.Account.CreateAccount(this.iAccount);
-                        MessageBox.Show("Se ha realizado la operacion sobre el id: " + (iFacade.Client.GetAllClients()).Last().Id);
+                        MessageBox.Show("Se ha realizado la operacion sobre el id: " + (iFacade.Account.GetAllAccounts()).Last().Id);
                     }
                 else
                     {
