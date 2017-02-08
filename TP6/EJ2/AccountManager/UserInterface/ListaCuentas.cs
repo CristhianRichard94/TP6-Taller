@@ -89,7 +89,7 @@ namespace AccountManager.UserInterface
 
         private void cuentasEnDescubiertoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = iFacade.Account.GetAllOverdrawnAccounts();
         }
 
         private void todasLasCuentasToolStripMenuItem_Click(object sender, EventArgs e)

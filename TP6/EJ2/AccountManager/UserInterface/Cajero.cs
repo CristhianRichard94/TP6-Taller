@@ -128,15 +128,19 @@ namespace AccountManager.UserInterface
             double monto;
             try
             {
-                monto = Convert.ToDouble(textBox2.Text)*-1;
+                monto = Convert.ToDouble(textBox2.Text) * -1;
                 iFacade.Account.NewMovement(iAccount, "Retiro", monto);
                 groupBox2.Visible = true;
                 groupBox4.Visible = false;
                 MessageBox.Show("Se ha Realizado el Retiro");
             }
-            catch (Exception)
+            catch (ArgumentOutOfRangeException)
             {
-                MessageBox.Show("Se ha producido un error al realizar la operacion");
+                MessageBox.Show("Monto ingresado invalido");
+            }
+            catch(DBConcurrencyException)
+            {
+                MessageBox.Show("se ha producido un error en la base de datos");
             }
         }
 

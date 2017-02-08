@@ -72,12 +72,6 @@ namespace AccountManager.UserInterface
             
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            ListarCuenta listarcu= new ListarCuenta(iFacade);
-            listarcu.Show();
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             Cajero cajero = new Cajero(iFacade);
