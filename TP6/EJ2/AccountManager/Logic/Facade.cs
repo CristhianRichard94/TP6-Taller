@@ -12,7 +12,10 @@ namespace AccountManager.Logic
     {
         private ClientOperations iClient;
         private AccountOperations iAccount;
-
+        /// <summary>
+        /// Constructor de la fachada, utiliza un mapeador personalizado para transformar los obejetos DTO para la base de datos
+        /// </summary>
+        /// <param name="pUOW"></param>
         public Facade(UnitOfWork pUOW)
         {
             AutoMapper.Mapper.Initialize(c => c.AddProfile(new Mapeador()));

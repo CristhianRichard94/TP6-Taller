@@ -5,7 +5,9 @@ using System.Collections.Generic;
 
 namespace AccountManager.DTO
 {
-    
+    /// <summary>
+    /// La clase DTO se utiliza para comunicar la fachada con la interfaz gráfica
+    /// </summary>
     public class ClientDTO
     {
 

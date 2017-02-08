@@ -44,10 +44,5 @@ namespace AccountManager.UserInterface
         {
 
         }
-
-        private void actualizarTablaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ActualizarTabla();
-        }
     }
 }

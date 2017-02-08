@@ -14,12 +14,15 @@ namespace AccountManager.Logic
     {
 
         private UnitOfWork iUOW;
-
+        
         public ClientOperations(UnitOfWork pUnit)
         {
             this.iUOW = pUnit;
         }
-    
+    /// <summary>
+    /// Crea clientes, mapeandolos desde DTO usado en la interfaz a la base de datos
+    /// </summary>
+    /// <param name="pClient"></param>
         public void CreateClient (ClientDTO pClient)
         {
             try
@@ -33,7 +36,10 @@ namespace AccountManager.Logic
                 throw new Exception("Se ha producido un error al Crear el Cliente");
             }
         }
-
+        /// <summary>
+        /// Actualiza un cliente
+        /// </summary>
+        /// <param name="pClient"></param>
         public void UpdateClient(ClientDTO pClient)
         {
 
@@ -67,6 +73,10 @@ namespace AccountManager.Logic
             this.iUOW.Complete();
         }
 
+        /// <summary>
+        /// Elimina un cliente de la base de datos
+        /// </summary>
+        /// <param name="pClient"></param>
         public void DeleteClient(ClientDTO pClient)
         {
             Client client;
@@ -82,7 +92,11 @@ namespace AccountManager.Logic
             this.iUOW.ClientRepository.Remove(client);
             this.iUOW.Complete();
         }
-
+        /// <summary>
+        /// Obtiene un cliente de la base de datos
+        /// </summary>
+        /// <param name="pId">id mediante el cual se busca el cliente</param>
+        /// <returns></returns>
         public ClientDTO GetClient(int pId)
         {
             Client client = this.iUOW.ClientRepository.Get(pId);
@@ -92,7 +106,10 @@ namespace AccountManager.Logic
             }
             return Mapper.Map<ClientDTO>(client);
         }
-
+        /// <summary>
+        /// Obtiene todos los clientes de la base de datos
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<ClientDTO> GetAllClients()
         {
             IEnumerable<Client> list;

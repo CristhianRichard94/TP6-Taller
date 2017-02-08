@@ -118,12 +118,6 @@
     <Compile Include="UserInterface\ListaCuentas.Designer.cs">
       <DependentUpon>ListaCuentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\ListarCuenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserInterface\ListarCuenta.Designer.cs">
-      <DependentUpon>ListarCuenta.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserInterface\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,9 +158,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\ListaCuentas.resx">
       <DependentUpon>ListaCuentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\ListarCuenta.resx">
-      <DependentUpon>ListarCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
