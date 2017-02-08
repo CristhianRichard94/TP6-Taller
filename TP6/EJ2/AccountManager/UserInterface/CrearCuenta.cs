@@ -13,7 +13,7 @@ namespace AccountManager.UserInterface
         public CrearCuenta(Facade pFacade)
         {
             InitializeComponent();
-            this.iFacade = pFacade;
+            iFacade = pFacade;
             if (this.iAccount == null)
             {
                 this.iAccount = new AccountDTO();
@@ -99,7 +99,10 @@ namespace AccountManager.UserInterface
         private void button1_Click(object sender, EventArgs e)
         {
             SeleccionarCliente selecCliente = new SeleccionarCliente(iFacade);
-            selecCliente.Show();
+            selecCliente.ShowDialog();
+            string pid = selecCliente.IdSeleccionado;
+            this.textBox3.Text = pid;
+            
         }
 
         private void CrearCuenta_Load(object sender, EventArgs e)
