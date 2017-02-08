@@ -84,7 +84,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(376, 213);
+            this.button2.Location = new System.Drawing.Point(369, 242);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -107,11 +107,10 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Location = new System.Drawing.Point(63, 12);
+            this.groupBox2.Location = new System.Drawing.Point(92, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(292, 184);
             this.groupBox2.TabIndex = 5;
@@ -130,16 +129,15 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.groupBox3);
             this.groupBox4.Controls.Add(this.button11);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.button10);
             this.groupBox4.Controls.Add(this.button9);
             this.groupBox4.Controls.Add(this.textBox2);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Location = new System.Drawing.Point(10, 0);
+            this.groupBox4.Location = new System.Drawing.Point(58, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(276, 187);
+            this.groupBox4.Size = new System.Drawing.Size(312, 197);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Operacion";
@@ -149,16 +147,16 @@
             this.groupBox3.Controls.Add(this.button8);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(29, 13);
+            this.groupBox3.Location = new System.Drawing.Point(39, 72);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(224, 174);
+            this.groupBox3.Size = new System.Drawing.Size(312, 197);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Balance";
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(80, 135);
+            this.button8.Location = new System.Drawing.Point(115, 146);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 6;
@@ -169,7 +167,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(96, 80);
+            this.label3.Location = new System.Drawing.Point(136, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 1;
@@ -179,7 +177,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 38);
+            this.label2.Location = new System.Drawing.Point(78, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 13);
             this.label2.TabIndex = 0;
@@ -187,7 +185,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(171, 145);
+            this.button11.Location = new System.Drawing.Point(171, 146);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(82, 23);
             this.button11.TabIndex = 5;
@@ -274,8 +272,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 356);
+            this.ClientSize = new System.Drawing.Size(453, 274);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Name = "Cajero";

@@ -134,7 +134,9 @@ namespace AccountManager.Logic
 
         public void NewMovement(AccountDTO pAccount, String pDescription, double pAmount)
         {
-            var account = this.iUOW.AccountRepository.Get(pAccount.Id);
+            Account account;
+            account = this.iUOW.AccountRepository.Get(pAccount.Id);
+
             if (account == null)
             {
                 throw new Exception("El ID es incorrecto");
@@ -144,7 +146,7 @@ namespace AccountManager.Logic
         }
 
         /// <summary>
-        /// Se obtienen todas las uentas registradas 
+        /// Se obtienen todas las cuentas registradas 
         /// </summary>
             public IEnumerable<AccountDTO> GetAllAccounts()
         {

@@ -97,8 +97,8 @@ namespace AccountManager.UserInterface
         {
             groupBox4.Visible = true;
             groupBox2.Visible = false;
-            button9.Visible = true;
-            button11.Visible = false;
+            button9.Visible = false;
+            button11.Visible = true;
             label4.Text = "Depósito";
         }
 
@@ -106,8 +106,8 @@ namespace AccountManager.UserInterface
         {
             groupBox4.Visible = true;
             groupBox2.Visible = false;
-            button9.Visible = false;
-            button11.Visible = true;
+            button9.Visible = true;
+            button11.Visible = false;
             label4.Text = "Retiro";
         }
 
@@ -129,14 +129,14 @@ namespace AccountManager.UserInterface
             try
             {
                 monto = Convert.ToDouble(textBox2.Text);
-                iFacade.Account.NewMovement(iAccount, "Deposito", monto);
+                iFacade.Account.NewMovement(iAccount, "Retiro", monto);
                 groupBox2.Visible = true;
                 groupBox4.Visible = false;
-                MessageBox.Show("Se ha Realizado el depósito");
+                MessageBox.Show("Se ha Realizado el Retiro");
             }
             catch (Exception)
             {
-                MessageBox.Show("El monto ingresado es inválido");
+                MessageBox.Show("Se ha producido un error al realizar la operacion");
             }
         }
 
@@ -146,14 +146,14 @@ namespace AccountManager.UserInterface
             try
             {
                 monto = Convert.ToDouble(textBox2.Text) * -1;
-                iFacade.Account.NewMovement(iAccount, "Retiro", monto);
+                iFacade.Account.NewMovement(iAccount, "Deposito", monto);
                 groupBox2.Visible = true;
                 groupBox4.Visible = false;
-                MessageBox.Show("Se ha Realizado el retiro");
+                MessageBox.Show("Se ha Realizado el Deposito");
             }
             catch (Exception)
             {
-                MessageBox.Show("El monto ingresado es inválido");
+                MessageBox.Show("Se ha producido un error al realizar la operacion");
             }
         }
     }
