@@ -55,7 +55,7 @@ namespace AccountManager.UserInterface
         private void crearToolStripMenuItem_Crear_Click(object sender, EventArgs e)
         {
             CrearCuenta crearcu = new CrearCuenta(iFacade);
-            crearcu.ShowDialog();
+            crearcu.Show();
             ActualizarTabla();
         }
 
@@ -89,6 +89,16 @@ namespace AccountManager.UserInterface
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void cuentasEnDescubiertoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = iFacade.Account.GetAllOverdrawnAccounts();
+        }
+
+        private void todasLasCuentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ActualizarTabla();
         }
     }
 }

@@ -35,7 +35,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +53,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button4_cuentas);
-            this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Location = new System.Drawing.Point(202, 72);
             this.groupBox2.Name = "groupBox2";
@@ -75,7 +73,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(49, 114);
+            this.button6.Location = new System.Drawing.Point(49, 89);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(123, 23);
             this.button6.TabIndex = 5;
@@ -114,16 +112,6 @@
             this.groupBox1.Text = "Clientes";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(49, 74);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Listar";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,6 +141,5 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button5;
     }
 }

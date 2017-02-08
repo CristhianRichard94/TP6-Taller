@@ -34,7 +34,6 @@
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.actualizarTablaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -49,11 +48,8 @@
             this.Date,
             this.Amount,
             this.Description});
-            this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.dataGridView1.Location = new System.Drawing.Point(0, 27);
-            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.Size = new System.Drawing.Size(544, 330);
             this.dataGridView1.TabIndex = 0;
@@ -86,20 +82,12 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.actualizarTablaToolStripMenuItem,
             this.volverToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(544, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // actualizarTablaToolStripMenuItem
-            // 
-            this.actualizarTablaToolStripMenuItem.Name = "actualizarTablaToolStripMenuItem";
-            this.actualizarTablaToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
-            this.actualizarTablaToolStripMenuItem.Text = "Actualizar Tabla";
-            this.actualizarTablaToolStripMenuItem.Click += new System.EventHandler(this.actualizarTablaToolStripMenuItem_Click);
             // 
             // volverToolStripMenuItem
             // 
@@ -136,6 +124,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.ToolStripMenuItem actualizarTablaToolStripMenuItem;
     }
 }

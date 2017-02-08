@@ -36,6 +36,8 @@
             this.actualizarTablaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.todasLasCuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuentasEnDescubiertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +88,9 @@
             // 
             // actualizarTablaToolStripMenuItem
             // 
+            this.actualizarTablaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.todasLasCuentasToolStripMenuItem,
+            this.cuentasEnDescubiertoToolStripMenuItem});
             this.actualizarTablaToolStripMenuItem.Name = "actualizarTablaToolStripMenuItem";
             this.actualizarTablaToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.actualizarTablaToolStripMenuItem.Text = "Actualizar Tabla";
@@ -111,6 +116,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(544, 331);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // todasLasCuentasToolStripMenuItem
+            // 
+            this.todasLasCuentasToolStripMenuItem.Name = "todasLasCuentasToolStripMenuItem";
+            this.todasLasCuentasToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.todasLasCuentasToolStripMenuItem.Text = "Todas las Cuentas";
+            this.todasLasCuentasToolStripMenuItem.Click += new System.EventHandler(this.todasLasCuentasToolStripMenuItem_Click);
+            // 
+            // cuentasEnDescubiertoToolStripMenuItem
+            // 
+            this.cuentasEnDescubiertoToolStripMenuItem.Name = "cuentasEnDescubiertoToolStripMenuItem";
+            this.cuentasEnDescubiertoToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.cuentasEnDescubiertoToolStripMenuItem.Text = "Cuentas en Descubierto";
+            this.cuentasEnDescubiertoToolStripMenuItem.Click += new System.EventHandler(this.cuentasEnDescubiertoToolStripMenuItem_Click);
             // 
             // ListaCuentas
             // 
@@ -141,5 +160,7 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem todasLasCuentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuentasEnDescubiertoToolStripMenuItem;
     }
 }
