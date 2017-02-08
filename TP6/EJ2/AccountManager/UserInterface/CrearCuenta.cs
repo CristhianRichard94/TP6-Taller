@@ -2,6 +2,10 @@
 using AccountManager.Logic;
 using AccountManager.DTO;
 using System.Windows.Forms;
+using System.Linq;
+using AccountManager.Domain;
+
+
 
 namespace AccountManager.UserInterface
 {
@@ -10,20 +14,44 @@ namespace AccountManager.UserInterface
         private Facade iFacade;
         private AccountDTO iAccount;
 
-        public CrearCuenta(Facade pFacade)
+        public CrearCuenta(Facade pFacade, AccountDTO pAccount=null)
         {
             InitializeComponent();
+            textBox2.Text = iAccount.OverdraftLimit.ToString();
             iFacade = pFacade;
+            this.iAccount = pAccount;
+           
+            ShowAccount();
+         
+
+            /* if (this.iAccount == null)
+             {
+                 this.iAccount = new AccountDTO();
+             }
+             else
+             {
+                 textBox4_id.Text = iAccount.Id.ToString();
+                // textBox3.Text = 
+             }*/
+
+
+        }
+
+        private void ShowAccount()
+        {
             if (this.iAccount == null)
             {
                 this.iAccount = new AccountDTO();
             }
             else
             {
-                textBox4.Text = iAccount.Id.ToString();
-               // textBox3.Text = 
+                textBox4_id.Text = iAccount.Id.ToString();
+                textBox1_Nombre.Text = iAccount.Name;
+                textBox2.Text = iAccount.OverdraftLimit.ToString();
+                textBox3.Text = iAccount.ClientId.ToString();
+               
             }
-            textBox2.Text = iAccount.OverdraftLimit.ToString();
+            
 
         }
 
@@ -50,46 +78,33 @@ namespace AccountManager.UserInterface
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.iAccount.Name = textBox1.Text;
-            this.iAccount.OverdraftLimit = Convert.ToDouble(textBox2.Text);
+
+            
             try
             {
-                this.iAccount.ClientId = Convert.ToInt32(textBox3.Text);
+                this.iAccount.Name = textBox1_Nombre.Text;
+                this.iAccount.OverdraftLimit = Convert.ToDouble(textBox2.Text);
+                this.iAccount.ClientId = Convert.ToInt32(textBox3.Text);        
+                if (this.iAccount.Id == -1)
+                    {
+                        iFacade.Account.CreateAccount(this.iAccount);
+                        MessageBox.Show("Se ha realizado la operacion sobre el id: " + (iFacade.Client.GetAllClients()).Last().Id);
+                    }
+                else
+                    {
+                        iFacade.Account.UpdateAccount(this.iAccount);
+                        MessageBox.Show("Se ha realizado la operacion sobre el id: " + iAccount.Id.ToString());
+                    }
+                this.Close();
             }
-            catch (Exception)
-            {
-                MessageBox.Show(" El Id ingresado es incorrecto ");
-            }
-            
-            if (String.IsNullOrWhiteSpace(textBox4.Text))
-            {
-                try
+
+            catch (Exception ex)
                 {
-                    iFacade.Account.CreateAccount(this.iAccount);
-                    this.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Ha ocurrido un error "+
+                    MessageBox.Show("ERROR "+
                                     ex.Message);
                 }
             }
-            else
-            {
-                try
-                {
-                    iFacade.Account.UpdateAccount(this.iAccount);
-                    this.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Ha occurido un error" +
-                                    ex.Message);
-                }
-
-            }
-
-        }
+                  
 
         private void label5_Click(object sender, EventArgs e)
         {

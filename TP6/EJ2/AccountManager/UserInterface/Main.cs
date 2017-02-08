@@ -66,9 +66,10 @@ namespace AccountManager.UserInterface
 
         private void button4_Click(object sender, EventArgs e)
         {
+
+            ListaCuentas listacu = new ListaCuentas(iFacade);
+            listacu.Show();
             
-            CrearCuenta crearcu = new CrearCuenta(iFacade);
-            crearcu.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)

@@ -28,20 +28,22 @@ namespace AccountManager.Logic
                 throw new Exception("Introduzca un nombre para la cuenta");
             }
             ///Controla el límite al descubierto
-            if (pAccount.OverdraftLimit < 1000)
+            if (pAccount.OverdraftLimit > 1000)
             {
                 throw new Exception("El límite de descubierto es 1000");
             }
             var client = this.iUOW.ClientRepository.Get(pAccount.ClientId);
             if (client == null)
             {
-                throw new Exception("El cliente no existe");
+               throw new Exception("El cliente no existe");
             }
             try
             {
-                var account = Mapper.Map<Account>(pAccount);
+                Account account = Mapper.Map<Account>(pAccount);
                 account.Movements = new List<AccountMovement>();
                 account.Client = client;
+
+
                 this.iUOW.AccountRepository.Add(account);
                 this.iUOW.Complete();
             }

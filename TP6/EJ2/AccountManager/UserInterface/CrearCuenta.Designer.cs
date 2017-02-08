@@ -32,14 +32,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox1_Nombre = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button1_Seleccionar = new System.Windows.Forms.Button();
             this.Crear = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button3_Cancelar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox4_id = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -81,13 +81,13 @@
             this.label4.Text = "Cliente Id";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox1
+            // textBox1_Nombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(259, 122);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1_Nombre.Location = new System.Drawing.Point(259, 122);
+            this.textBox1_Nombre.Name = "textBox1_Nombre";
+            this.textBox1_Nombre.Size = new System.Drawing.Size(148, 20);
+            this.textBox1_Nombre.TabIndex = 4;
+            this.textBox1_Nombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -105,16 +105,16 @@
             this.textBox3.TabIndex = 6;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // button1
+            // button1_Seleccionar
             // 
-            this.button1.AccessibleName = "SeleccionarCliente";
-            this.button1.Location = new System.Drawing.Point(431, 231);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Seleccionar...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1_Seleccionar.AccessibleName = "SeleccionarCliente";
+            this.button1_Seleccionar.Location = new System.Drawing.Point(431, 231);
+            this.button1_Seleccionar.Name = "button1_Seleccionar";
+            this.button1_Seleccionar.Size = new System.Drawing.Size(89, 23);
+            this.button1_Seleccionar.TabIndex = 7;
+            this.button1_Seleccionar.Text = "Seleccionar...";
+            this.button1_Seleccionar.UseVisualStyleBackColor = true;
+            this.button1_Seleccionar.Click += new System.EventHandler(this.button1_Click);
             // 
             // Crear
             // 
@@ -127,15 +127,15 @@
             this.Crear.UseVisualStyleBackColor = true;
             this.Crear.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // button3_Cancelar
             // 
-            this.button3.Location = new System.Drawing.Point(32, 296);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3_Cancelar.Location = new System.Drawing.Point(32, 296);
+            this.button3_Cancelar.Name = "button3_Cancelar";
+            this.button3_Cancelar.Size = new System.Drawing.Size(75, 23);
+            this.button3_Cancelar.TabIndex = 9;
+            this.button3_Cancelar.Text = "Cancelar";
+            this.button3_Cancelar.UseVisualStyleBackColor = true;
+            this.button3_Cancelar.Click += new System.EventHandler(this.button3_Click);
             // 
             // label5
             // 
@@ -147,27 +147,30 @@
             this.label5.Text = "Id";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox4
+            // textBox4_id
             // 
-            this.textBox4.Location = new System.Drawing.Point(259, 76);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 11;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4_id.AccessibleName = "Id";
+            this.textBox4_id.Enabled = false;
+            this.textBox4_id.Location = new System.Drawing.Point(259, 76);
+            this.textBox4_id.Name = "textBox4_id";
+            this.textBox4_id.ReadOnly = true;
+            this.textBox4_id.Size = new System.Drawing.Size(100, 20);
+            this.textBox4_id.TabIndex = 11;
+            this.textBox4_id.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // CrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 356);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox4_id);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button3_Cancelar);
             this.Controls.Add(this.Crear);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button1_Seleccionar);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox1_Nombre);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -186,13 +189,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox1_Nombre;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button1_Seleccionar;
         private System.Windows.Forms.Button Crear;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button3_Cancelar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox4_id;
     }
 }

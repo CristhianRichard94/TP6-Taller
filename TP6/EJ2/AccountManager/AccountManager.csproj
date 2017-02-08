@@ -112,6 +112,12 @@
     <Compile Include="UserInterface\ListaClientes.Designer.cs">
       <DependentUpon>ListaClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserInterface\ListaCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ListaCuentas.Designer.cs">
+      <DependentUpon>ListaCuentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInterface\ListarCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\ListaClientes.resx">
       <DependentUpon>ListaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ListaCuentas.resx">
+      <DependentUpon>ListaCuentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
