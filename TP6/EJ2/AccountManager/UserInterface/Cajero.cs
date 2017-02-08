@@ -99,7 +99,6 @@ namespace AccountManager.UserInterface
             groupBox2.Visible = false;
             button9.Visible = true;
             button11.Visible = false;
-            button12.Visible = false;
             label4.Text = "Depósito";
         }
 
@@ -109,19 +108,9 @@ namespace AccountManager.UserInterface
             groupBox2.Visible = false;
             button9.Visible = false;
             button11.Visible = true;
-            button12.Visible = false;
             label4.Text = "Retiro";
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            groupBox4.Visible = true;
-            groupBox2.Visible = false;
-            button9.Visible = false;
-            button11.Visible = false;
-            button12.Visible = true;
-            label4.Text = "Transferencia";
-        }
 
         private void button10_Click(object sender, EventArgs e)
         {
@@ -161,23 +150,6 @@ namespace AccountManager.UserInterface
                 groupBox2.Visible = true;
                 groupBox4.Visible = false;
                 MessageBox.Show("Se ha Realizado el retiro");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("El monto ingresado es inválido");
-            }
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            double monto;
-            try
-            {
-                monto = Convert.ToDouble(textBox2.Text) * -1;
-                iFacade.Account.NewMovement(iAccount, "Transferencia", monto);
-                groupBox2.Visible = true;
-                groupBox4.Visible = false;
-                MessageBox.Show("Se ha Realizado la transferencia");
             }
             catch (Exception)
             {
